@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Franz Local Marketing</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+      background: #f8fafc;
+      line-height: 1.6;
+    }
+
+    header {
+      background:
+        radial-gradient(circle at top left, rgba(96, 165, 250, 0.35), transparent 35%),
+        linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: #dbeafe;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    header h1 {
+      font-size: 46px;
+      max-width: 850px;
+      margin: 0 auto 20px;
+      line-height: 1.15;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      font-size: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #dbeafe;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+      color: #0f172a;
+      text-align: center;
+      letter-spacing: -0.5px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 40px;
+      color: #64748b;
+      font-size: 18px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+      border: 1px solid #e5e7eb;
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(15,23,42,0.12);
+    }
+
+    .icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: #eff6ff;
+      color: #1d4ed8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      color: #1d4ed8;
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .about {
+      background: white;
+      border-radius: 24px;
+      padding: 45px;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.08);
+      max-width: 850px;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+    }
+
+    .about p {
+      font-size: 18px;
+      color: #475569;
+    }
+
+    .contact-section {
+      background: #eef6ff;
+      max-width: none;
+    }
+
+    .contact-box {
+      background: white;
+      max-width: 750px;
+      margin: auto;
+      padding: 35px;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(15,23,42,0.1);
+      border: 1px solid #dbeafe;
+    }
+
+    .contact-info {
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+
+    a {
+      color: #1d4ed8;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #1d4ed8;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    }
+
+    button {
+      width: 100%;
+      background: #1d4ed8;
+      color: white;
+      border: none;
+      padding: 15px 24px;
+      border-radius: 10px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #1e40af;
+    }
+
+    .note {
+      margin-top: 12px;
+      font-size: 14px;
+      color: #64748b;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #0f172a;
+      color: #cbd5e1;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 70px 18px;
+      }
+
+      header h1 {
+        font-size: 34px;
+      }
+
+      header p {
+        font-size: 18px;
+      }
+
+      section {
+        padding: 50px 18px;
+      }
+
+      .about, .contact-box {
+        padding: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="badge">Local Marketing Help for Small Businesses</div>
+    <h1>Get More Local Customers Through Better Reviews, Google Visibility, and a Better Website</h1>
+    <p>I help local businesses improve their Google presence, online reviews, social media, websites, and local marketing so more customers can find and trust them.</p>
+  </header>
+
+  <section>
+    <h2>Services</h2>
+    <p class="section-intro">Simple, practical marketing help for small businesses that want to look better online and attract more local customers.</p>
+
+    <div class="services">
+      <div class="card">
+        <div class="icon">📍</div>
+        <h3>Google Profile Optimization</h3>
+        <p>Improve your Google Business Profile so your business looks more professional and shows up better in local searches.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">⭐</div>
+        <h3>Review Management</h3>
+        <p>Build trust with more customer reviews, better responses, and a stronger online reputation.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📱</div>
+        <h3>Social Media Content</h3>
+        <p>Stay active online with simple, consistent content that keeps your business visible.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>Website Creation</h3>
+        <p>Create a clean, professional website that helps customers understand your business and contact you easily.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon">📈</div>
+        <h3>Local Business Marketing</h3>
+        <p>Use practical marketing strategies to help more nearby customers discover your business.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="about">
+      <h2>About</h2>
+      <p>I’m a local marketing specialist helping small businesses improve their online presence, attract more customers, and build trust through Google visibility, reviews, social media, websites, and local marketing.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section">
+    <h2>Contact</h2>
+
+    <div class="contact-box">
+      <div class="contact-info">
+        <p><strong>Phone:</strong> <a href="tel:4078217294">407-821-7294</a></p>
+        <p><strong>Email:</strong> <a href="mailto:Thomasjonfranz@gmail.com">Thomasjonfranz@gmail.com</a></p>
+      </div>
+
+      <form action="mailto:Thomasjonfranz@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Tell me about your business"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <p class="note">Note: this simple free form opens the visitor’s email app. A full form can be connected later.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Franz Local Marketing. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
